@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background_ripple"
+        android:padding="32dp"
+        android:layout_margin="4dp"
+        android:elevation="4dp">
+
+    <TextView
+            android:id="@+id/title"
+            style="@style/TitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/range"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/address"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toEndOf="@id/range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"/>
+
+    <TextView
+            android:id="@+id/bikeAvailabilityDesc"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/placeAvailabilityDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/available_bikes_desc"
+            android:drawableTop="@drawable/bike_black"/>
+
+    <TextView
+            android:id="@+id/bikeAvailability"
+            style="@style/NumberText"
+            android:textColor="@color/bikeCountColor"
+            app:layout_constraintTop_toBottomOf="@id/bikeAvailabilityDesc"
+            app:layout_constraintStart_toStartOf="@id/bikeAvailabilityDesc"
+            app:layout_constraintEnd_toEndOf="@id/bikeAvailabilityDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/placeAvailabilityDesc"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintStart_toEndOf="@id/bikeAvailabilityDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="@string/available_places_desc"
+            android:drawableTop="@drawable/link_black"/>
+
+    <TextView
+            android:id="@+id/placeAvailability"
+            style="@style/NumberText"
+            app:layout_constraintTop_toBottomOf="@id/placeAvailabilityDesc"
+            app:layout_constraintStart_toStartOf="@id/placeAvailabilityDesc"
+            app:layout_constraintEnd_toEndOf="@id/placeAvailabilityDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

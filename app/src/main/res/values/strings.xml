@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LocalBike</string>
+    <string name="available_bikes_desc">Available bikes</string>
+    <string name="available_places_desc">Available places</string>
+    <string name="distance_template">%s m</string>
+    <string name="user_location_prompt">Your location</string>
+    <string name="station_location_prompt">Station location</string>
+    <string name="toast_downloading_data_error">An error occurred while downloading data, please try again later
+    </string>
+</resources>
