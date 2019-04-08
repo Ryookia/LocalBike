@@ -88,7 +88,11 @@ class StationDetailsFragment : StandardFragment(),
     }
 
     override fun setRange(range: String) {
-        this.range.text = getString(R.string.distance_template, range)
+        if (range.isEmpty()) {
+            this.range.text = range
+        } else {
+            this.range.text = getString(R.string.distance_template, range)
+        }
     }
 
     override fun setBikeAvailability(bikeAvailability: String) {

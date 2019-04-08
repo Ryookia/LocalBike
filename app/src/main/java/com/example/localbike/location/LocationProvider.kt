@@ -33,7 +33,8 @@ class LocationProvider(private val context: Context) {
                 listener
             )
         } catch (e: SecurityException) {
-            println(e)
+        } catch (e: IllegalArgumentException) {
+
         }
     }
 
